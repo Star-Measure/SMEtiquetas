@@ -483,7 +483,7 @@ namespace SMEtiquetasBrother
 
                 TextoAux2 += TextoAux;
                 NroOrdemProducao = TextoAux2;
-                string ComandoAux = "Select * from `smp`.`SM_Produtos` where SM_PD_NroSerie like '" + NroOrdemProducao + "%' ORDER BY SM_PD_ID";
+                string ComandoAux = "Select * from `smp`.`SM_Produtos` where SM_PD_NroSerie like '" + NroOrdemProducao + "%' ORDER BY SM_PD_NroCliente";
                 comandoSQL.CommandText = string.Format(ComandoAux);
                 adaptador = new MySqlDataAdapter(comandoSQL);
                 dataset = new DataSet();
